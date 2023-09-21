@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../include/foo/foo.h"
+#include <foo/foo.h>
 
 TEST(TestTest, TestTest) {
     ASSERT_EQ(1,1);
