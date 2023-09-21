@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <sstream>
-#include "../../include/bar/bar.h"
+#include <bar/bar.h>
 
 TEST(TestTestTest, TestTestTest) {
     ASSERT_EQ(1,1);

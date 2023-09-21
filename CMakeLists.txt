@@ -4,6 +4,11 @@ set(PROJECT_NAME cpp-cmake-template)
 
 project(${PROJECT_NAME})
 
+add_subdirectory(src)
+
+# Include directories for your project
+include_directories(include)
+
 set(SOURCES
     src/bar/bar.cpp
     src/foo/foo.cpp
