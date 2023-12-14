@@ -2,10 +2,6 @@
 #include <sstream>
 #include <bar/bar.h>
 
-TEST(TestTestTest, TestTestTest) {
-    ASSERT_EQ(1,1);
-}
-
 class BarTest : public ::testing::Test {
 protected:
     Bar bar;
