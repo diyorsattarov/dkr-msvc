@@ -3,7 +3,7 @@ set(PROJECT_NAME microservice)
 project(${PROJECT_NAME})
 
 # Add the executable
-add_executable(microservice microservice.cpp)
+add_executable(microservice src/microservice.cpp)
 
 # Link libevent
 find_package(Libevent REQUIRED)
