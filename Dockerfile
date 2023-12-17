@@ -7,8 +7,7 @@ RUN apt-get update && apt-get install -y \
     make \
     cmake \
     git \
-    libevent-dev
-    # libboost-all-dev
+    libboost-all-dev
 
 # Set the working directory for the application
 WORKDIR /app
