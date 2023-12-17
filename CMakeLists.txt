@@ -1,23 +1,17 @@
 cmake_minimum_required(VERSION 3.10)
-set(PROJECT_NAME cpp-cmake-template)
-
+set(PROJECT_NAME microservice)
 project(${PROJECT_NAME})
-add_subdirectory(src)
 
-add_executable(tests
-    # ... other test files ...
-    tests/bar/test_bar.cpp
-)
+# Add the executable
+add_executable(microservice microservice.cpp)
 
-find_package(GTest REQUIRED)
-# ... other libraries ...
+# Link libevent
+find_package(Libevent REQUIRED)
+target_link_libraries(microservice PRIVATE ${LIBEVENT_LIB})
 
-target_include_directories(tests PRIVATE ${GTEST_INCLUDE_DIRS})
-target_link_libraries(tests PRIVATE
-    ${GTEST_BOTH_LIBRARIES} 
-    pthread 
-    bar
-    # ... other libraries ...
-)
 
-add_custom_target(run_tests COMMAND tests)
+# Find Boost libraries
+# find_package(Boost 1.71.0 REQUIRED COMPONENTS system thread)
+
+# Link Boost libraries
+# target_link_libraries(service PRIVATE Boost::system Boost::thread)
